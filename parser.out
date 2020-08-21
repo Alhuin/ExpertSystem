@@ -1,0 +1,572 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> expression
+Rule 1     expression -> ATOM ATOM
+Rule 2     expression -> NOT expression
+Rule 3     expression -> NOT LPAREN expression RPAREN
+Rule 4     expression -> expression IMP expression
+Rule 5     expression -> expression IOI expression
+Rule 6     expression -> expression AND expression
+Rule 7     expression -> expression OR expression
+Rule 8     expression -> expression XOR expression
+Rule 9     expression -> LPAREN expression RPAREN
+Rule 10    expression -> QUERIES
+Rule 11    expression -> FACTS
+Rule 12    expression -> ATOM
+
+Terminals, with rules where they appear
+
+AND                  : 6
+ATOM                 : 1 1 12
+FACTS                : 11
+IMP                  : 4
+IOI                  : 5
+LPAREN               : 3 9
+NOT                  : 2 3
+OR                   : 7
+QUERIES              : 10
+RPAREN               : 3 9
+XOR                  : 8
+error                : 
+
+Nonterminals, with rules where they appear
+
+expression           : 2 3 4 4 5 5 6 6 7 7 8 8 9 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . expression
+    (1) expression -> . ATOM ATOM
+    (2) expression -> . NOT expression
+    (3) expression -> . NOT LPAREN expression RPAREN
+    (4) expression -> . expression IMP expression
+    (5) expression -> . expression IOI expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression OR expression
+    (8) expression -> . expression XOR expression
+    (9) expression -> . LPAREN expression RPAREN
+    (10) expression -> . QUERIES
+    (11) expression -> . FACTS
+    (12) expression -> . ATOM
+
+    ATOM            shift and go to state 2
+    NOT             shift and go to state 3
+    LPAREN          shift and go to state 4
+    QUERIES         shift and go to state 5
+    FACTS           shift and go to state 6
+
+    expression                     shift and go to state 1
+
+state 1
+
+    (0) S' -> expression .
+    (4) expression -> expression . IMP expression
+    (5) expression -> expression . IOI expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . OR expression
+    (8) expression -> expression . XOR expression
+
+    IMP             shift and go to state 7
+    IOI             shift and go to state 8
+    AND             shift and go to state 9
+    OR              shift and go to state 10
+    XOR             shift and go to state 11
+
+
+state 2
+
+    (1) expression -> ATOM . ATOM
+    (12) expression -> ATOM .
+
+    ATOM            shift and go to state 12
+    IMP             reduce using rule 12 (expression -> ATOM .)
+    IOI             reduce using rule 12 (expression -> ATOM .)
+    AND             reduce using rule 12 (expression -> ATOM .)
+    OR              reduce using rule 12 (expression -> ATOM .)
+    XOR             reduce using rule 12 (expression -> ATOM .)
+    $end            reduce using rule 12 (expression -> ATOM .)
+    RPAREN          reduce using rule 12 (expression -> ATOM .)
+
+
+state 3
+
+    (2) expression -> NOT . expression
+    (3) expression -> NOT . LPAREN expression RPAREN
+    (1) expression -> . ATOM ATOM
+    (2) expression -> . NOT expression
+    (3) expression -> . NOT LPAREN expression RPAREN
+    (4) expression -> . expression IMP expression
+    (5) expression -> . expression IOI expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression OR expression
+    (8) expression -> . expression XOR expression
+    (9) expression -> . LPAREN expression RPAREN
+    (10) expression -> . QUERIES
+    (11) expression -> . FACTS
+    (12) expression -> . ATOM
+
+    LPAREN          shift and go to state 14
+    ATOM            shift and go to state 2
+    NOT             shift and go to state 3
+    QUERIES         shift and go to state 5
+    FACTS           shift and go to state 6
+
+    expression                     shift and go to state 13
+
+state 4
+
+    (9) expression -> LPAREN . expression RPAREN
+    (1) expression -> . ATOM ATOM
+    (2) expression -> . NOT expression
+    (3) expression -> . NOT LPAREN expression RPAREN
+    (4) expression -> . expression IMP expression
+    (5) expression -> . expression IOI expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression OR expression
+    (8) expression -> . expression XOR expression
+    (9) expression -> . LPAREN expression RPAREN
+    (10) expression -> . QUERIES
+    (11) expression -> . FACTS
+    (12) expression -> . ATOM
+
+    ATOM            shift and go to state 2
+    NOT             shift and go to state 3
+    LPAREN          shift and go to state 4
+    QUERIES         shift and go to state 5
+    FACTS           shift and go to state 6
+
+    expression                     shift and go to state 15
+
+state 5
+
+    (10) expression -> QUERIES .
+
+    IMP             reduce using rule 10 (expression -> QUERIES .)
+    IOI             reduce using rule 10 (expression -> QUERIES .)
+    AND             reduce using rule 10 (expression -> QUERIES .)
+    OR              reduce using rule 10 (expression -> QUERIES .)
+    XOR             reduce using rule 10 (expression -> QUERIES .)
+    $end            reduce using rule 10 (expression -> QUERIES .)
+    RPAREN          reduce using rule 10 (expression -> QUERIES .)
+
+
+state 6
+
+    (11) expression -> FACTS .
+
+    IMP             reduce using rule 11 (expression -> FACTS .)
+    IOI             reduce using rule 11 (expression -> FACTS .)
+    AND             reduce using rule 11 (expression -> FACTS .)
+    OR              reduce using rule 11 (expression -> FACTS .)
+    XOR             reduce using rule 11 (expression -> FACTS .)
+    $end            reduce using rule 11 (expression -> FACTS .)
+    RPAREN          reduce using rule 11 (expression -> FACTS .)
+
+
+state 7
+
+    (4) expression -> expression IMP . expression
+    (1) expression -> . ATOM ATOM
+    (2) expression -> . NOT expression
+    (3) expression -> . NOT LPAREN expression RPAREN
+    (4) expression -> . expression IMP expression
+    (5) expression -> . expression IOI expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression OR expression
+    (8) expression -> . expression XOR expression
+    (9) expression -> . LPAREN expression RPAREN
+    (10) expression -> . QUERIES
+    (11) expression -> . FACTS
+    (12) expression -> . ATOM
+
+    ATOM            shift and go to state 2
+    NOT             shift and go to state 3
+    LPAREN          shift and go to state 4
+    QUERIES         shift and go to state 5
+    FACTS           shift and go to state 6
+
+    expression                     shift and go to state 16
+
+state 8
+
+    (5) expression -> expression IOI . expression
+    (1) expression -> . ATOM ATOM
+    (2) expression -> . NOT expression
+    (3) expression -> . NOT LPAREN expression RPAREN
+    (4) expression -> . expression IMP expression
+    (5) expression -> . expression IOI expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression OR expression
+    (8) expression -> . expression XOR expression
+    (9) expression -> . LPAREN expression RPAREN
+    (10) expression -> . QUERIES
+    (11) expression -> . FACTS
+    (12) expression -> . ATOM
+
+    ATOM            shift and go to state 2
+    NOT             shift and go to state 3
+    LPAREN          shift and go to state 4
+    QUERIES         shift and go to state 5
+    FACTS           shift and go to state 6
+
+    expression                     shift and go to state 17
+
+state 9
+
+    (6) expression -> expression AND . expression
+    (1) expression -> . ATOM ATOM
+    (2) expression -> . NOT expression
+    (3) expression -> . NOT LPAREN expression RPAREN
+    (4) expression -> . expression IMP expression
+    (5) expression -> . expression IOI expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression OR expression
+    (8) expression -> . expression XOR expression
+    (9) expression -> . LPAREN expression RPAREN
+    (10) expression -> . QUERIES
+    (11) expression -> . FACTS
+    (12) expression -> . ATOM
+
+    ATOM            shift and go to state 2
+    NOT             shift and go to state 3
+    LPAREN          shift and go to state 4
+    QUERIES         shift and go to state 5
+    FACTS           shift and go to state 6
+
+    expression                     shift and go to state 18
+
+state 10
+
+    (7) expression -> expression OR . expression
+    (1) expression -> . ATOM ATOM
+    (2) expression -> . NOT expression
+    (3) expression -> . NOT LPAREN expression RPAREN
+    (4) expression -> . expression IMP expression
+    (5) expression -> . expression IOI expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression OR expression
+    (8) expression -> . expression XOR expression
+    (9) expression -> . LPAREN expression RPAREN
+    (10) expression -> . QUERIES
+    (11) expression -> . FACTS
+    (12) expression -> . ATOM
+
+    ATOM            shift and go to state 2
+    NOT             shift and go to state 3
+    LPAREN          shift and go to state 4
+    QUERIES         shift and go to state 5
+    FACTS           shift and go to state 6
+
+    expression                     shift and go to state 19
+
+state 11
+
+    (8) expression -> expression XOR . expression
+    (1) expression -> . ATOM ATOM
+    (2) expression -> . NOT expression
+    (3) expression -> . NOT LPAREN expression RPAREN
+    (4) expression -> . expression IMP expression
+    (5) expression -> . expression IOI expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression OR expression
+    (8) expression -> . expression XOR expression
+    (9) expression -> . LPAREN expression RPAREN
+    (10) expression -> . QUERIES
+    (11) expression -> . FACTS
+    (12) expression -> . ATOM
+
+    ATOM            shift and go to state 2
+    NOT             shift and go to state 3
+    LPAREN          shift and go to state 4
+    QUERIES         shift and go to state 5
+    FACTS           shift and go to state 6
+
+    expression                     shift and go to state 20
+
+state 12
+
+    (1) expression -> ATOM ATOM .
+
+    IMP             reduce using rule 1 (expression -> ATOM ATOM .)
+    IOI             reduce using rule 1 (expression -> ATOM ATOM .)
+    AND             reduce using rule 1 (expression -> ATOM ATOM .)
+    OR              reduce using rule 1 (expression -> ATOM ATOM .)
+    XOR             reduce using rule 1 (expression -> ATOM ATOM .)
+    $end            reduce using rule 1 (expression -> ATOM ATOM .)
+    RPAREN          reduce using rule 1 (expression -> ATOM ATOM .)
+
+
+state 13
+
+    (2) expression -> NOT expression .
+    (4) expression -> expression . IMP expression
+    (5) expression -> expression . IOI expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . OR expression
+    (8) expression -> expression . XOR expression
+
+    IMP             reduce using rule 2 (expression -> NOT expression .)
+    IOI             reduce using rule 2 (expression -> NOT expression .)
+    AND             reduce using rule 2 (expression -> NOT expression .)
+    OR              reduce using rule 2 (expression -> NOT expression .)
+    XOR             reduce using rule 2 (expression -> NOT expression .)
+    $end            reduce using rule 2 (expression -> NOT expression .)
+    RPAREN          reduce using rule 2 (expression -> NOT expression .)
+
+  ! IMP             [ shift and go to state 7 ]
+  ! IOI             [ shift and go to state 8 ]
+  ! AND             [ shift and go to state 9 ]
+  ! OR              [ shift and go to state 10 ]
+  ! XOR             [ shift and go to state 11 ]
+
+
+state 14
+
+    (3) expression -> NOT LPAREN . expression RPAREN
+    (9) expression -> LPAREN . expression RPAREN
+    (1) expression -> . ATOM ATOM
+    (2) expression -> . NOT expression
+    (3) expression -> . NOT LPAREN expression RPAREN
+    (4) expression -> . expression IMP expression
+    (5) expression -> . expression IOI expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression OR expression
+    (8) expression -> . expression XOR expression
+    (9) expression -> . LPAREN expression RPAREN
+    (10) expression -> . QUERIES
+    (11) expression -> . FACTS
+    (12) expression -> . ATOM
+
+    ATOM            shift and go to state 2
+    NOT             shift and go to state 3
+    LPAREN          shift and go to state 4
+    QUERIES         shift and go to state 5
+    FACTS           shift and go to state 6
+
+    expression                     shift and go to state 21
+
+state 15
+
+    (9) expression -> LPAREN expression . RPAREN
+    (4) expression -> expression . IMP expression
+    (5) expression -> expression . IOI expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . OR expression
+    (8) expression -> expression . XOR expression
+
+    RPAREN          shift and go to state 22
+    IMP             shift and go to state 7
+    IOI             shift and go to state 8
+    AND             shift and go to state 9
+    OR              shift and go to state 10
+    XOR             shift and go to state 11
+
+
+state 16
+
+    (4) expression -> expression IMP expression .
+    (4) expression -> expression . IMP expression
+    (5) expression -> expression . IOI expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . OR expression
+    (8) expression -> expression . XOR expression
+
+  ! shift/reduce conflict for IMP resolved as shift
+  ! shift/reduce conflict for IOI resolved as shift
+  ! shift/reduce conflict for AND resolved as shift
+  ! shift/reduce conflict for OR resolved as shift
+  ! shift/reduce conflict for XOR resolved as shift
+    $end            reduce using rule 4 (expression -> expression IMP expression .)
+    RPAREN          reduce using rule 4 (expression -> expression IMP expression .)
+    IMP             shift and go to state 7
+    IOI             shift and go to state 8
+    AND             shift and go to state 9
+    OR              shift and go to state 10
+    XOR             shift and go to state 11
+
+  ! IMP             [ reduce using rule 4 (expression -> expression IMP expression .) ]
+  ! IOI             [ reduce using rule 4 (expression -> expression IMP expression .) ]
+  ! AND             [ reduce using rule 4 (expression -> expression IMP expression .) ]
+  ! OR              [ reduce using rule 4 (expression -> expression IMP expression .) ]
+  ! XOR             [ reduce using rule 4 (expression -> expression IMP expression .) ]
+
+
+state 17
+
+    (5) expression -> expression IOI expression .
+    (4) expression -> expression . IMP expression
+    (5) expression -> expression . IOI expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . OR expression
+    (8) expression -> expression . XOR expression
+
+  ! shift/reduce conflict for IMP resolved as shift
+  ! shift/reduce conflict for IOI resolved as shift
+  ! shift/reduce conflict for AND resolved as shift
+  ! shift/reduce conflict for OR resolved as shift
+  ! shift/reduce conflict for XOR resolved as shift
+    $end            reduce using rule 5 (expression -> expression IOI expression .)
+    RPAREN          reduce using rule 5 (expression -> expression IOI expression .)
+    IMP             shift and go to state 7
+    IOI             shift and go to state 8
+    AND             shift and go to state 9
+    OR              shift and go to state 10
+    XOR             shift and go to state 11
+
+  ! IMP             [ reduce using rule 5 (expression -> expression IOI expression .) ]
+  ! IOI             [ reduce using rule 5 (expression -> expression IOI expression .) ]
+  ! AND             [ reduce using rule 5 (expression -> expression IOI expression .) ]
+  ! OR              [ reduce using rule 5 (expression -> expression IOI expression .) ]
+  ! XOR             [ reduce using rule 5 (expression -> expression IOI expression .) ]
+
+
+state 18
+
+    (6) expression -> expression AND expression .
+    (4) expression -> expression . IMP expression
+    (5) expression -> expression . IOI expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . OR expression
+    (8) expression -> expression . XOR expression
+
+    IMP             reduce using rule 6 (expression -> expression AND expression .)
+    IOI             reduce using rule 6 (expression -> expression AND expression .)
+    AND             reduce using rule 6 (expression -> expression AND expression .)
+    OR              reduce using rule 6 (expression -> expression AND expression .)
+    XOR             reduce using rule 6 (expression -> expression AND expression .)
+    $end            reduce using rule 6 (expression -> expression AND expression .)
+    RPAREN          reduce using rule 6 (expression -> expression AND expression .)
+
+  ! IMP             [ shift and go to state 7 ]
+  ! IOI             [ shift and go to state 8 ]
+  ! AND             [ shift and go to state 9 ]
+  ! OR              [ shift and go to state 10 ]
+  ! XOR             [ shift and go to state 11 ]
+
+
+state 19
+
+    (7) expression -> expression OR expression .
+    (4) expression -> expression . IMP expression
+    (5) expression -> expression . IOI expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . OR expression
+    (8) expression -> expression . XOR expression
+
+    IMP             reduce using rule 7 (expression -> expression OR expression .)
+    IOI             reduce using rule 7 (expression -> expression OR expression .)
+    OR              reduce using rule 7 (expression -> expression OR expression .)
+    XOR             reduce using rule 7 (expression -> expression OR expression .)
+    $end            reduce using rule 7 (expression -> expression OR expression .)
+    RPAREN          reduce using rule 7 (expression -> expression OR expression .)
+    AND             shift and go to state 9
+
+  ! AND             [ reduce using rule 7 (expression -> expression OR expression .) ]
+  ! IMP             [ shift and go to state 7 ]
+  ! IOI             [ shift and go to state 8 ]
+  ! OR              [ shift and go to state 10 ]
+  ! XOR             [ shift and go to state 11 ]
+
+
+state 20
+
+    (8) expression -> expression XOR expression .
+    (4) expression -> expression . IMP expression
+    (5) expression -> expression . IOI expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . OR expression
+    (8) expression -> expression . XOR expression
+
+    IMP             reduce using rule 8 (expression -> expression XOR expression .)
+    IOI             reduce using rule 8 (expression -> expression XOR expression .)
+    XOR             reduce using rule 8 (expression -> expression XOR expression .)
+    $end            reduce using rule 8 (expression -> expression XOR expression .)
+    RPAREN          reduce using rule 8 (expression -> expression XOR expression .)
+    AND             shift and go to state 9
+    OR              shift and go to state 10
+
+  ! AND             [ reduce using rule 8 (expression -> expression XOR expression .) ]
+  ! OR              [ reduce using rule 8 (expression -> expression XOR expression .) ]
+  ! IMP             [ shift and go to state 7 ]
+  ! IOI             [ shift and go to state 8 ]
+  ! XOR             [ shift and go to state 11 ]
+
+
+state 21
+
+    (3) expression -> NOT LPAREN expression . RPAREN
+    (9) expression -> LPAREN expression . RPAREN
+    (4) expression -> expression . IMP expression
+    (5) expression -> expression . IOI expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . OR expression
+    (8) expression -> expression . XOR expression
+
+    RPAREN          shift and go to state 23
+    IMP             shift and go to state 7
+    IOI             shift and go to state 8
+    AND             shift and go to state 9
+    OR              shift and go to state 10
+    XOR             shift and go to state 11
+
+
+state 22
+
+    (9) expression -> LPAREN expression RPAREN .
+
+    IMP             reduce using rule 9 (expression -> LPAREN expression RPAREN .)
+    IOI             reduce using rule 9 (expression -> LPAREN expression RPAREN .)
+    AND             reduce using rule 9 (expression -> LPAREN expression RPAREN .)
+    OR              reduce using rule 9 (expression -> LPAREN expression RPAREN .)
+    XOR             reduce using rule 9 (expression -> LPAREN expression RPAREN .)
+    $end            reduce using rule 9 (expression -> LPAREN expression RPAREN .)
+    RPAREN          reduce using rule 9 (expression -> LPAREN expression RPAREN .)
+
+
+state 23
+
+    (3) expression -> NOT LPAREN expression RPAREN .
+    (9) expression -> LPAREN expression RPAREN .
+
+  ! reduce/reduce conflict for IMP resolved using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+  ! reduce/reduce conflict for IOI resolved using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+  ! reduce/reduce conflict for AND resolved using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+  ! reduce/reduce conflict for OR resolved using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+  ! reduce/reduce conflict for XOR resolved using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+  ! reduce/reduce conflict for $end resolved using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+  ! reduce/reduce conflict for RPAREN resolved using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+    IMP             reduce using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+    IOI             reduce using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+    AND             reduce using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+    OR              reduce using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+    XOR             reduce using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+    $end            reduce using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+    RPAREN          reduce using rule 3 (expression -> NOT LPAREN expression RPAREN .)
+
+  ! IMP             [ reduce using rule 9 (expression -> LPAREN expression RPAREN .) ]
+  ! IOI             [ reduce using rule 9 (expression -> LPAREN expression RPAREN .) ]
+  ! AND             [ reduce using rule 9 (expression -> LPAREN expression RPAREN .) ]
+  ! OR              [ reduce using rule 9 (expression -> LPAREN expression RPAREN .) ]
+  ! XOR             [ reduce using rule 9 (expression -> LPAREN expression RPAREN .) ]
+  ! $end            [ reduce using rule 9 (expression -> LPAREN expression RPAREN .) ]
+  ! RPAREN          [ reduce using rule 9 (expression -> LPAREN expression RPAREN .) ]
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: shift/reduce conflict for IMP in state 16 resolved as shift
+WARNING: shift/reduce conflict for IOI in state 16 resolved as shift
+WARNING: shift/reduce conflict for AND in state 16 resolved as shift
+WARNING: shift/reduce conflict for OR in state 16 resolved as shift
+WARNING: shift/reduce conflict for XOR in state 16 resolved as shift
+WARNING: shift/reduce conflict for IMP in state 17 resolved as shift
+WARNING: shift/reduce conflict for IOI in state 17 resolved as shift
+WARNING: shift/reduce conflict for AND in state 17 resolved as shift
+WARNING: shift/reduce conflict for OR in state 17 resolved as shift
+WARNING: shift/reduce conflict for XOR in state 17 resolved as shift
+WARNING: reduce/reduce conflict in state 23 resolved using rule (expression -> NOT LPAREN expression RPAREN)
+WARNING: rejected rule (expression -> LPAREN expression RPAREN) in state 23

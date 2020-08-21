@@ -1,0 +1,12 @@
+A => B | C | D | E
+A => !B
+A => !C
+D | E => F
+=A
+?FBCDE
+
+# solution F = False
+# solution B = False
+# solution C = False
+# solution D = Undetermined
+# solution E = Undetermined

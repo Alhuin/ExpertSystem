@@ -1,0 +1,11 @@
+A ^ B => C 
+D ^ E => F
+G ^ H => I
+J ^ K => L
+
+=ABDH
+?CFIL
+# solution C = False
+# solution F = True
+# solution I = True
+# solution L = False

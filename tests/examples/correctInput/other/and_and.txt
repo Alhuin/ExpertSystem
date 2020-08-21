@@ -1,0 +1,10 @@
+A + B => C + D
+A + Z => Y
+B + D => X
+=AB
+?CDXY
+
+# solution C = True
+# solution D = True
+# solution X = True
+# solution Y = False

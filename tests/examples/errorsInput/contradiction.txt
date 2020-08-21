@@ -1,0 +1,7 @@
+B => C + D
+A => !C
+
+=AB
+?C
+
+# solution C = Error : Contradiction for the fact C

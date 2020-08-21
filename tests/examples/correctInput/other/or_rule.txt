@@ -1,0 +1,8 @@
+A | B => C 
+D | E => F
+
+=ABD
+?CF
+
+# solution C = True
+# solution F = True

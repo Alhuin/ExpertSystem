@@ -1,0 +1,34 @@
+P + A => Q
+I ^ K => P
+O => !P
+K + L => O
+D + E + M => N
+L ^ K => M
+I | C => J + !K
+G + A => I
+F => !H
+E => F + (G | H)
+D => E ^ C
+B => !C
+A => B
+
+=AD
+?ABCDEFGHIJKLMNOPQ
+
+# solution A = True
+# solution B = True
+# solution C = False
+# solution D = True
+# solution E = True
+# solution F = True
+# solution G = True
+# solution H = False
+# solution I = True
+# solution J = True
+# solution K = False
+# solution L = False
+# solution M = False
+# solution N = False
+# solution O = False
+# solution P = True
+# solution Q = True

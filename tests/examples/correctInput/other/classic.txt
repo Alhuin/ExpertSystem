@@ -1,0 +1,14 @@
+A+B=>C|D
+E+F=>G+H
+I+J=>K^L
+M=>!N
+=ABEFIJM
+?CDGHKLN
+
+# solution C = Undetermined
+# solution D = Undetermined
+# solution G = True
+# solution H = True
+# solution K = Undetermined
+# solution L = Undetermined
+# solution N = False

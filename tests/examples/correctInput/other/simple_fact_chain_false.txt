@@ -1,0 +1,20 @@
+P => Q
+O => P
+N => O
+M => N
+L => M
+K => L
+J => K
+H => I
+G => H
+F => G
+E => F
+D => E
+C => D
+B => C
+A => B
+
+=
+?Q
+
+# solution Q = False

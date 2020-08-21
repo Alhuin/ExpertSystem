@@ -1,0 +1,6 @@
+A | Z => (Q ^ C) + (V | Y) + (W ^ Z) + !C 
+
+=A
+?Q
+
+# solution Q = True

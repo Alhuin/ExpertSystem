@@ -1,0 +1,11 @@
+A + C <=> G
+P | X => G
+V => X + Y
+V ^ Z <=> B + I
+U => !Z + I
+!I <=> B
+
+=BU
+?AC
+
+# solution A = Error : Contradiction for the fact I

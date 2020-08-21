@@ -1,0 +1,8 @@
+C <=> D 
+C <=> F 
+
+=F
+?FCD
+# solution F = True
+# solution C = True
+# solution D = True

@@ -1,0 +1,20 @@
+B => A
+D + E => B
+G + H => F
+I + J => G
+G => H
+L + M => K
+O + P => L + N
+N => M
+
+=DEIJOP
+?ABFGHKLNM
+# solution A = True
+# solution B = True
+# solution F = True
+# solution G = True
+# solution H = True
+# solution K = True
+# solution L = True
+# solution N = True
+# solution M = True

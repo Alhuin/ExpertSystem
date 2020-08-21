@@ -1,0 +1,12 @@
+!(A + B) ^ (D | K) => P
+X | (A | K ^ Z) => N
+!T + !X => G
+!L => M
+
+=ADF
+?PNGM
+
+# solution P = False
+# solution N = True
+# solution G = True
+# solution M = True

@@ -1,0 +1,12 @@
+B + C => A
+D | E => B
+B => C
+
+=D
+?DABCE
+
+# solution D = True
+# solution A = True
+# solution B = True
+# solution C = True
+# solution E = False

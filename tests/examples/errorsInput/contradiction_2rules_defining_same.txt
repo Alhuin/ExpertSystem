@@ -1,0 +1,9 @@
+A + B => C
+C | E => F
+E ^ A => F
+
+=ABE
+?CF
+
+# solution C = True
+# solution F = Error : Contradiction for the fact F

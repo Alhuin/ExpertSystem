@@ -1,0 +1,9 @@
+A=>B|C
+B|C|G=>D
+=A
+?DBCG
+
+# solution D = False
+# solution B = Undetermined
+# solution C = Undetermined
+# solution G = False

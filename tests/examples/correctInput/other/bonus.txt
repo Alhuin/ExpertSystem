@@ -1,0 +1,16 @@
+A <=> C + D
+A <=> E | F
+A | G <=> A | H
+A + I <=> A + J
+
+=A
+?CDEFGHIJ
+
+# solution C = True
+# solution D = True
+# solution E = Undetermined
+# solution F = Undetermined
+# solution G = False
+# solution H = False
+# solution I = False
+# solution J = False

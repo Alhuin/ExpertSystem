@@ -1,0 +1,15 @@
+P + A => Q
+O => !P
+K + L => O
+D + E + M => N
+I | C => J + !K
+G + A => I
+F => !H 
+D => E ^ C
+B => !C
+A => B
+
+=AD
+?Q
+
+# solution Q = False

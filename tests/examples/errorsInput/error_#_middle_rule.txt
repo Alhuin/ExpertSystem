@@ -1,0 +1,10 @@
+A => B
+A + B + C 
+W => Z
+A + B => I
+(A) + (!B) => C
+(D ^ C) | T + !T + !(A + B) => A
+A + B => (C + H)
+
+=BD
+?AI

@@ -1,0 +1,9 @@
+A ^ X => D | W
+B + Y => X
+C => !W
+B => T + !D
+
+=ABC
+?D
+
+# solution D = Error : Contradiction for the fact D

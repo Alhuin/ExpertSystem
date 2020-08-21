@@ -1,0 +1,13 @@
+A + C <=> G
+P | X => G
+V => X + Y
+V ^ Z <=> B + I
+U => !Z + I
+
+=BUBU
+?CUCU
+
+# solution C = True
+# solution U = True
+# solution C = True
+# solution U = True

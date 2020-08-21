@@ -1,0 +1,13 @@
+A|B=>C
+D+E=>F
+G^H=>I
+!J=>K
+
+=ABDEGHJ
+?CFIK
+
+
+# solution C = True
+# solution F = True
+# solution I = False
+# solution K = False

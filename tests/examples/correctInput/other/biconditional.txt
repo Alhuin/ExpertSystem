@@ -1,0 +1,8 @@
+A + B <=> C | D
+
+=D
+?ABC
+
+# solution A = True
+# solution B = True
+# solution C = False

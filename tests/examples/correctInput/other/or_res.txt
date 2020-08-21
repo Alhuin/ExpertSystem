@@ -1,0 +1,7 @@
+A => D | Q
+C | E => !D
+
+=AC
+?Q
+
+# solution Q = True

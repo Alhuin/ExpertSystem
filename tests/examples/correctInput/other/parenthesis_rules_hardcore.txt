@@ -1,0 +1,16 @@
+((((((((((A)))))))))) => C
+A + !(B) => D
+(D | E) => W
+!(!(!C) ^ !(!F)) => G
+(((!E ^ (D + A + B)))) => F
+(E + ((!C | F)) + A) + B ^ (A + F) => Z
+
+=AB
+?CDWGFZ
+
+# solution C = True
+# solution D = False
+# solution W = False
+# solution G = True
+# solution F = True
+# solution Z = True

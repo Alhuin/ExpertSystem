@@ -1,0 +1,6 @@
+!A ^ !A | A | !A + A => C
+
+=A
+?C
+
+# solution C = True

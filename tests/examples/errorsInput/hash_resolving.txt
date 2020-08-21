@@ -1,0 +1,8 @@
+A => C + !(B + D)
+!(B + D) => !C
+
+=A
+?C
+
+# ici il faut des hash pour deviner en vrai
+# solution C = Error : Contradiction for the fact C

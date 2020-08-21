@@ -1,0 +1,7 @@
+A ^ !Z => Q | C 
+A => !C
+
+=A
+?Q
+
+# solution Q = False
